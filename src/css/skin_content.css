@@ -1,0 +1,187 @@
+/* ===== Squarespace edition: hide the template, keep its content ===== */
+/* Squarespace content inside the new layout */
+.usg-r .sq-content .sqs-layout,.usg-r .sq-content .sqs-row{margin:0}
+.usg-r .sq-content .sqs-block{padding-left:0;padding-right:0}
+.usg-r .sq-content .sqs-block:first-child{padding-top:0}
+.usg-r .sq-content img{max-width:100%;height:auto}
+.usg-r .sq-content .image-block-wrapper,.usg-r .sq-content .intrinsic,.usg-r .sq-content .image-block-outer-wrapper .sqs-image-shape-container-element{padding-bottom:0!important;height:auto!important;overflow:visible!important}
+.usg-r .sq-content .image-block-wrapper img{position:static!important;width:100%!important;height:auto!important;border-radius:16px}
+.usg-r .sq-content figcaption .role{display:block;font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--soft)}
+.usg-r .sq-content figcaption .name{display:block;font-weight:800}
+.usg-r .sq-content .sqs-block-form .form-wrapper,.usg-r .ct-main .sqs-block-form{background:var(--card);border-radius:22px;padding:clamp(18px,3vw,30px);box-shadow:0 10px 34px rgba(0,0,0,.08)}
+.usg-r .sqs-block-form input:not([type=checkbox]):not([type=radio]),.usg-r .sqs-block-form textarea,.usg-r .sqs-block-form select{border:2px solid var(--rule)!important;border-radius:14px!important;padding:12px 14px!important;background:var(--page)!important;color:var(--text)!important;font:inherit!important}
+.usg-r .sqs-block-form input:focus,.usg-r .sqs-block-form textarea:focus{border-color:var(--orange)!important;outline:none}
+.usg-r .sqs-block-form .form-button-wrapper input,.usg-r .sqs-block-form button[type=submit],.usg-r .sqs-block-form input[type=submit]{background:var(--orange)!important;color:#000!important;border:0!important;border-radius:999px!important;padding:14px 26px!important;font-weight:800!important;cursor:pointer}
+.usg-r .sqs-block-form label,.usg-r .sqs-block-form .title{font-weight:800!important;color:var(--text)!important}
+.usg-r .ig-host{display:block}
+.usg-r .ig-host img{border-radius:14px}
+.usg-r .sm-grid img{object-position:center 20%}
+.usg-r .sqs-block-form input:not([type=checkbox]):not([type=radio]):not([type=submit]),.usg-r .sqs-block-form textarea,.usg-r .sqs-block-form select{width:100%!important;box-sizing:border-box}
+.usg-r .sqs-block-form textarea{min-height:150px}
+/* mission statement: locked full-screen panel, words light up as you scroll, then on to the photo (all screen sizes) */
+.usg-r .pin-words{height:200vh!important;height:200svh!important}
+.usg-r .pw-sticky{position:sticky!important;top:0!important;height:100vh!important;height:100svh!important;min-height:0!important;padding:0!important;display:flex!important;align-items:center!important;overflow:hidden}
+@media (max-width:760px){.usg-r .pin-words{height:230vh!important;height:230svh!important}.usg-r .pin-words blockquote{font-size:clamp(1.7rem,7.4vw,2.6rem)!important;line-height:1.08}
+  .usg-r .pin-words .w{color:rgba(255,255,255,.16)!important}.usg-r .pin-words .w.lit{color:#fff!important}.usg-r .pin-words em .w.lit{color:var(--orange)!important}}
+html.noscroll .pin-words{height:auto!important}
+html.noscroll .pw-sticky{position:static!important;height:auto!important;padding:90px 0!important}
+/* embeds (Google Slides, calendars, video): soft rounded frame instead of the heavy black border */
+.usg-r .sq-content iframe{border:0!important;border-radius:18px;box-shadow:0 12px 34px rgba(0,0,0,.12);background:#fff;display:block}
+.usg-r .sq-content .embed-block-wrapper,.usg-r .sq-content .sqs-block-embed .sqs-block-content,.usg-r .sq-content .intrinsic-inner{border:0!important;background:transparent!important}
+/* constitution page: full-width flipbooks, one per document */
+.usg-r .books .book{display:flex;flex-direction:column;gap:18px}
+.usg-r .books .book h2{margin:0}
+.usg-r .books .book .file{align-self:flex-start}
+.usg-r .sq-content .sm-ph img{margin:0!important;display:block;position:absolute;inset:0;width:100%!important;height:100%!important;max-width:none;object-fit:cover;border-radius:0}
+/* Squarespace text layout, tidied: left-aligned, flexible columns, sane sub-headings */
+/* keep each block's own Squarespace alignment, and make the design follow it */
+.usg-r .sq-content .is-center{text-align:center!important}
+.usg-r .sq-content :is(p,blockquote).is-center{max-width:72ch;margin-left:auto!important;margin-right:auto!important}
+.usg-r .sq-content :is(h1,h2,h3,h4).is-center::after{margin-left:auto!important;margin-right:auto!important}
+.usg-r .sq-content :is(ul,ol).chip-list{list-style:none!important;padding:0!important;display:flex;flex-wrap:wrap;justify-content:center;gap:10px;max-width:960px;margin:1.2em auto 1.6em!important}
+.usg-r .sq-content .chip-list>li{background:var(--card);border-radius:999px;padding:10px 18px!important;font-weight:700;margin:0!important;line-height:1.3;text-align:center!important;box-shadow:0 4px 14px rgba(0,0,0,.05)}
+.usg-r .sq-content .chip-list>li::before,.usg-r .sq-content .chip-list>li::marker{content:none!important;display:none!important}
+.usg-r .sq-content .chip-list>li p{margin:0!important;display:inline;text-align:inherit!important}
+.usg-r .sq-content .chip-list .chip-note{display:block;font-size:.78rem;font-weight:600;color:var(--orange);margin-top:2px}
+.usg-r .sq-content :is(ul,ol).is-center:not(.chip-list){display:table;margin-left:auto!important;margin-right:auto!important;text-align:left!important}
+.usg-r .sq-content :is(ul,ol).is-center:not(.chip-list) li{text-align:left!important}
+.usg-r .sq-content .sqs-row{display:flex;flex-wrap:wrap;gap:clamp(18px,3vw,36px);margin:0!important}
+.usg-r .sq-content .sqs-row::before,.usg-r .sq-content .sqs-row::after{display:none!important}
+.usg-r .sq-content .sqs-row>[class*="sqs-col-"]{float:none!important;width:auto!important;flex:1 1 300px;min-width:0;padding:0!important}
+.usg-r .sq-content h3{font-size:clamp(1.25rem,1.9vw,1.6rem)!important;text-transform:none!important;letter-spacing:-.01em!important;line-height:1.15!important;font-variation-settings:"wdth" 100!important}
+.usg-r .sq-content h4{font-size:1.1rem!important;text-transform:none!important;letter-spacing:0!important}
+.usg-r .sq-cardgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:clamp(16px,2vw,24px);margin:1.4em 0 2em}
+.usg-r .sq-cardgrid>*{width:auto!important;float:none!important;margin:0!important;min-width:0;background:var(--card);border-radius:22px;padding:clamp(20px,2.6vw,30px)!important;box-shadow:0 10px 30px rgba(0,0,0,.06);border-top:6px solid var(--orange)}
+.usg-r .sq-cardgrid>* h2,.usg-r .sq-cardgrid>* h3,.usg-r .sq-cardgrid>* h4{margin-top:0!important}
+.usg-r .sq-cardgrid>* h2::after,.usg-r .sq-cardgrid>* h3::after{display:none!important}
+.usg-r .sq-cardgrid>* .sqs-block{padding:0!important}
+.usg-r .sq-cardgrid>* p:last-child{margin-bottom:0}
+.usg-r .ig-post,.usg-r .ig-post *{text-decoration:none!important;color:inherit}
+/* use the width: sections side by side on wide screens */
+.usg-r .prose.sq-content{max-width:none}
+.usg-r .sq-sections{display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(30px,4vw,60px) clamp(30px,4vw,72px);align-items:start}
+@media (min-width:1100px){.usg-r .sq-sections.two{grid-template-columns:repeat(2,minmax(0,1fr))}.usg-r .sq-sections .wide,.usg-r .sq-sections .sq-intro{grid-column:1/-1}}
+.usg-r .sq-sec{min-width:0;border-top:3px solid var(--rule);padding-top:clamp(18px,2vw,28px)}
+.usg-r .sq-sec.sq-intro{border-top:0;padding-top:0}
+.usg-r .sq-sec>:first-child,.usg-r .sq-sec>:first-child>.sqs-block-content>:first-child,.usg-r .sq-sec h2:first-child{margin-top:0!important}
+.usg-r .sq-sec .sqs-block{padding-left:0!important;padding-right:0!important}
+.usg-r .sq-sec p{max-width:78ch}
+.usg-r .sq-sections.two .sq-sec:not(.wide):not(.sq-intro) p{max-width:none}
+.usg-r .sq-intro p:first-of-type{font-size:clamp(1.05rem,1.2vw,1.3rem);line-height:1.6}
+.usg-r .sq-sec hr{display:none}
+@media (min-width:1600px){.usg-r .sq-content{font-size:1.08rem}}
+.usg-r .sq-content :is(p,li,a,td,h2,h3,h4){overflow-wrap:anywhere}
+/* big single images (flyers, posters) stay a sensible size */
+.usg-r .sq-content .sqs-block-image img,.usg-r .sq-content .image-block img{max-width:min(100%,980px)!important;margin-left:auto;margin-right:auto;display:block}
+.usg-r .sq-content .sqs-block-image figure,.usg-r .sq-content .image-block figure{max-width:980px;margin-left:auto;margin-right:auto}
+
+/* smoother scroll animations on phones */
+.usg-r .hero h1>span,.usg-r .hero .stripes,.usg-r #sticker,.usg-r .hero-foot,.usg-r .marquee,.usg-r .band .stripes,.usg-r .ph-track{will-change:transform;backface-visibility:hidden;transform:translateZ(0)}
+.usg-r .hero h1{will-change:opacity}
+@media (hover:none){.usg-r .marquee{transform:none!important}}
+/* phones: homepage photo walls (Instagram, events) swipe sideways instead of stacking one-per-screen */
+@media (max-width:760px){
+  .usg-r #latestWall.wall,.usg-r #v-home #evOut .wall{display:flex!important;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;gap:16px!important;padding:8px 18px 22px!important;margin:0 -18px!important;-webkit-overflow-scrolling:touch;scrollbar-width:none;overscroll-behavior-x:contain}
+  .usg-r #latestWall.wall::-webkit-scrollbar,.usg-r #v-home #evOut .wall::-webkit-scrollbar{display:none}
+  .usg-r #latestWall.wall>.poster,.usg-r #v-home #evOut .wall>.poster{flex:0 0 64%;max-width:280px;scroll-snap-align:center}
+  .usg-r #latestWall .gcap{font-size:.85rem;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+}
+/* Committees / Working Groups index: intro + quick links beside the bubble ring */
+.usg-r .cm-index{display:grid;gap:clamp(28px,5vw,80px);align-items:start;margin:6px 0 20px}
+@media (min-width:1000px){.usg-r .cm-index{grid-template-columns:minmax(0,5fr) minmax(0,7fr)}}
+.usg-r .cm-index-text .prose{max-width:60ch}
+.usg-r .cm-index-text .prose h2{margin-top:0!important}
+.usg-r .cm-index-text .prose p{font-size:clamp(1rem,1.1vw,1.12rem);line-height:1.65}
+.usg-r .cm-hint{font-size:.78rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase!important;color:var(--soft);margin:26px 0 10px}
+.usg-r .cm-chips{display:flex;flex-wrap:wrap;gap:8px}
+.usg-r .cm-chips a{display:inline-flex;align-items:center;gap:9px;padding:9px 15px 9px 11px;border-radius:999px;background:var(--card);font-weight:800;font-size:.92rem;text-decoration:none!important;color:inherit;box-shadow:0 3px 10px rgba(0,0,0,.05);transition:transform .2s,background .2s,color .2s}
+.usg-r .cm-chips a i{width:13px;height:13px;border-radius:50%;background:var(--acc);flex:none;box-shadow:0 0 0 2px rgba(0,0,0,.12)}
+.usg-r .cm-chips a:hover,.usg-r .cm-chips a:focus-visible{transform:translateY(-2px);background:var(--acc);color:#fff}
+.usg-r .cm-chips a:hover i{background:#fff}
+.usg-r .cm-index-orbit .orbit{width:100%;max-width:760px;margin:0 auto}
+@media (min-width:1000px){.usg-r .cm-index-orbit{position:sticky;top:96px}}
+
+/* tighter top spacing; page-level h1s inside content read like section headings */
+.usg-r .sq-content>.sqs-layout>:first-child:not(.sq-sec),.usg-r .sq-content>:first-child:not(.sq-sec){margin-top:0!important;padding-top:0!important}
+.usg-r .sq-sections>.sq-sec.sq-intro{padding-top:0!important}
+.usg-r .sq-content .sqs-block:first-child .sqs-html-content>:first-child{margin-top:0!important}
+.usg-r .sq-content h1{font-size:clamp(1.8rem,3.6vw,2.8rem)!important;line-height:1.02}
+.usg-r .sq-content .sqs-block{padding-top:0!important;padding-bottom:0!important;margin-bottom:clamp(14px,2vw,24px)}
+.usg-r .sq-sec :is(h1,h2,h3):first-child{margin-top:0!important}
+/* class pages: photo + officer cards */
+.usg-r .class-photo{margin:6px auto 26px!important;max-width:1100px}
+.usg-r .class-photo img{width:100%!important;height:auto;border-radius:22px;box-shadow:0 18px 50px rgba(0,0,0,.12);display:block;max-height:640px;object-fit:cover}
+.usg-r .officers{max-width:1100px;margin:8px auto 18px;display:flex;flex-direction:column;gap:18px}
+.usg-r .off-row{display:flex;flex-wrap:wrap;justify-content:center;gap:16px}
+.usg-r .off{position:relative;flex:0 1 230px;min-width:190px;background:var(--card);border-radius:22px;padding:30px 18px 20px;text-align:center!important;box-shadow:0 10px 28px rgba(0,0,0,.07);overflow:hidden;display:flex;flex-direction:column;align-items:center;gap:6px;transition:transform .25s}
+.usg-r .off:hover{transform:translateY(-4px) rotate(-.6deg)}
+.usg-r .off::before{content:"";position:absolute;inset:0 0 auto;height:9px;background:repeating-linear-gradient(115deg,var(--orange) 0 16px,#111 16px 26px)}
+.usg-r .off-av{width:60px;height:60px;border-radius:50%;background:var(--orange);color:#000;display:grid;place-items:center;font-weight:900;font-size:1.25rem;letter-spacing:.02em;border:3px solid #111;box-shadow:4px 4px 0 #111;margin-bottom:8px;font-variation-settings:"wdth" 115}
+.usg-r .off .role{display:block;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase!important;color:var(--orange)}
+.usg-r .off .name{display:block;font-size:1.15rem;font-weight:800;line-height:1.2}
+.usg-r .off-big{flex-basis:300px;padding:36px 22px 26px}
+.usg-r .off-big .off-av{width:78px;height:78px;font-size:1.6rem}
+.usg-r .off-big .name{font-size:1.45rem}
+.usg-r .off-big .role{font-size:.8rem}
+@media (max-width:560px){.usg-r .off,.usg-r .off-big{flex:1 1 100%;min-width:0}}
+
+/* video band: space is held from the start (no jump); the video fades in when ready */
+.usg-r .reel{transition:none!important}
+.usg-r .reel.video-on .hero-bg{opacity:1}
+.usg-r .reel.vid-ready .hero-bg{opacity:1}
+/* events wall: hold space while it loads so the page below doesn't jump */
+.usg-r #events.ev-loading .evOut{min-height:440px}
+@media (max-width:760px){.usg-r #events.ev-loading .evOut{min-height:383px}}
+
+
+/* a link that is a whole line: caps button-link with an arrow */
+.usg-r a.link-solo{display:inline-flex!important;align-items:center;gap:.7em;font-family:"Space Grotesk","Archivo",system-ui,sans-serif!important;font-variation-settings:normal!important;font-weight:800!important;text-transform:uppercase!important;letter-spacing:.06em!important;font-size:.88rem!important;line-height:1.25!important;padding:.95em 1.35em!important;background-image:none!important;border-radius:999px;background:#111!important;color:#fff!important;text-decoration:none!important;border:0!important;outline:0;box-shadow:4px 4px 0 var(--orange)!important;transition:transform .15s,box-shadow .15s;text-align:left;margin:.2em 0}
+.usg-r a.link-solo::after{content:"→";color:var(--orange);font-weight:900;font-size:1.15em;transition:transform .2s}
+.usg-r a.link-solo:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--orange)!important}
+.usg-r a.link-solo:hover::after{transform:translateX(4px)}
+.usg-r a.link-solo:focus-visible{outline:3px solid var(--orange)!important;outline-offset:3px}
+.usg-r :is(h1,h2,h3,h4) > a.link-solo,.usg-r :is(h1,h2,h3,h4) a.link-solo{font-size:.9rem!important}
+.usg-r :is(h1,h2,h3,h4):has(> a.link-solo)::after{display:none!important}
+
+/* Latest from USG: links left, Instagram grid right */
+.usg-r .ig-split{display:grid;gap:clamp(24px,4vw,64px);align-items:start;margin-top:8px}
+@media (min-width:900px){.usg-r .ig-split{grid-template-columns:minmax(0,4fr) minmax(0,8fr)}.usg-r .ig-side{position:sticky;top:110px}}
+.usg-r .ig-side{display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+.usg-r .ig-lead{font-size:clamp(1rem,1.2vw,1.15rem);line-height:1.6;margin:0;max-width:40ch}
+.usg-r .ig-big{display:flex;align-items:center;gap:14px;text-decoration:none!important;color:inherit!important;padding:14px 20px 14px 16px;border-radius:20px;background:var(--card);box-shadow:0 8px 24px rgba(0,0,0,.07);transition:transform .2s}
+.usg-r .ig-big svg{width:42px;height:42px;padding:8px;border-radius:12px;color:#fff;background:linear-gradient(45deg,#F58529,#DD2A7B 55%,#8134AF)}
+.usg-r .ig-big span{display:flex;flex-direction:column;font-weight:900;font-size:1.25rem;font-variation-settings:"wdth" 112}
+.usg-r .ig-big small,.usg-r .ig-mail small{font-size:.7rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase!important;color:var(--orange)}
+.usg-r .ig-big:hover{transform:translateY(-3px)}
+.usg-r .ig-mail{display:flex;flex-direction:column;text-decoration:none!important;color:inherit!important;font-weight:800;font-size:1.05rem;padding:4px 2px;border-bottom:2px solid var(--orange)}
+.usg-r .ig-grid2{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(6px,1vw,12px)}
+.usg-r .ig-tile{position:relative;display:block;aspect-ratio:1;border-radius:14px;overflow:hidden;background:#111;text-decoration:none!important}
+.usg-r .ig-tile img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s var(--ease)}
+.usg-r .ig-cap{position:absolute;inset:auto 0 0;padding:28px 12px 10px;font-size:.8rem;font-weight:700;line-height:1.35;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.82));opacity:0;transform:translateY(8px);transition:opacity .25s,transform .25s;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.usg-r .ig-tile:hover img{transform:scale(1.05)}.usg-r .ig-tile:hover .ig-cap,.usg-r .ig-tile:focus-visible .ig-cap{opacity:1;transform:none}
+@media (max-width:760px){.usg-r .ig-grid2{gap:6px}.usg-r .ig-tile{border-radius:10px}}
+
+/* Senate Members on phones: featured names a step up from the rest, not a jump; long names wrap cleanly */
+@media (max-width:760px){
+  .usg-r .sm.sm-big .sm-name{font-size:1.15rem!important;line-height:1.2!important}
+  .usg-r .sm .sm-name{font-size:1rem!important;line-height:1.25!important;overflow-wrap:anywhere;hyphens:auto}
+  .usg-r .sm .sm-role{font-size:.7rem!important;line-height:1.3!important}
+}
+
+/* scanned documents side by side on wide screens; page heading spans both */
+@media (min-width:1000px){.usg-r .books.books-2{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 40px;align-items:start}
+  .usg-r .books.books-2 > .books-head{grid-column:1/-1}
+  .usg-r .books.books-2 .book{margin:0!important;min-width:0}}
+.usg-r a.file .fl{display:inline}
+.usg-r a.file .fl em,.usg-r a.file .fl i{font-style:italic}
+/* keep the two books level even when one title wraps: titles, pages and buttons share rows */
+@media (min-width:1000px){
+  .usg-r .books.books-2 .book{display:grid!important;grid-row:span 3;grid-template-rows:subgrid;row-gap:0}
+  .usg-r .books.books-2 .book > h2{align-self:end;font-size:clamp(1.15rem,1.6vw,1.5rem)!important}
+  .usg-r .books.books-2 .book > a.file{justify-self:start;align-self:start}
+}
+
+/* long document lists: full width, two columns on wide screens */
+.usg-r .doc-list{display:grid;grid-template-columns:1fr;gap:12px;margin:8px 0 4px}
+.usg-r .doc-list a.file{margin:0!important;max-width:none!important;width:100%;box-sizing:border-box}
+@media (min-width:900px){.usg-r .doc-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 22px}}

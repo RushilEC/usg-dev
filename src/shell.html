@@ -1,0 +1,110 @@
+<header class="top" id="hdr">
+  <div class="wrap bar">
+    <a class="logo" href="/" aria-label="Princeton Undergraduate Student Government home"><span class="logo-badge" id="logoBadge" hidden><img id="logoImg" alt=""></span><b class="xw" id="logoText">USG</b><span>Princeton Undergraduate Student Government</span></a>
+    <nav class="main" aria-label="Main"><ul id="navList"></ul></nav>
+    <a class="pill" href="mailto:usg@princeton.edu">Email us</a>
+    <button class="pill burger" id="burger" aria-expanded="false" aria-controls="drawer">Menu</button>
+  </div>
+</header>
+<div class="drawer" id="drawer">
+  <div class="dh"><b class="xw" style="font-size:2rem">USG</b><button class="pill" id="dclose">Close</button></div>
+  <div id="drawerNav"></div>
+</div>
+
+<main>
+<!-- HOME -->
+<div class="view" id="v-home">
+  <section class="hero" data-band>
+    <svg class="stripes" viewBox="0 0 600 900" preserveAspectRatio="xMaxYMid slice" aria-hidden="true"><path d="M600 40 C470 60 330 30 170 92 C320 86 470 104 600 128Z"/><path d="M600 200 C430 196 300 238 60 330 C280 290 440 290 600 300Z"/><path d="M600 410 C470 420 360 460 220 520 C380 488 500 492 600 500Z"/><path d="M600 560 C400 572 250 640 0 760 C250 680 430 650 600 650Z"/><path d="M600 760 C500 768 410 800 300 850 C430 820 530 822 600 826Z"/><path d="M600 860 C540 864 480 884 420 900 L600 900Z"/></svg>
+    <a class="sticker" id="sticker" href="#visit">
+      <svg viewBox="0 0 200 200" aria-hidden="true"><defs><path id="circ" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"/></defs><text><textPath href="#circ">FRIST 204 ✦ TEA ✦ COFFEE ✦ SNACKS ✦ </textPath></text></svg>
+      <span class="in"><span class="led"></span><b class="cw" id="st-main">Frist 204</b> <small id="st-sub">Checking…</small></span>
+    </a>
+    <div class="wrap">
+      <h1 class="xw"><span><i>Serve.</i></span><span><i>Represent.</i></span><span><i>Advocate.</i></span></h1>
+      <div class="hero-foot"><p>The Undergraduate Student Government of Princeton University.</p><a class="pill" href="#events">See what’s on</a></div>
+    </div>
+  </section>
+  <div class="marquee" aria-hidden="true"><div class="track cw" id="track"></div></div>
+  <section class="reel" id="reel" aria-label="Princeton USG video">
+    <div class="hero-bg reel-bg" id="heroBg" aria-hidden="true"></div>
+    <div class="reel-tx"><span class="reel-kicker">Princeton USG</span><h2 class="reel-h">Princeton Undergraduate Student Government</h2></div>
+  </section>
+  <section class="s" id="events"><div class="wrap">
+    <div class="sh"><h2 class="xw evHead">What’s on</h2>
+      <div class="ev-tools"><div class="seg" role="group" aria-label="Event view"><button aria-pressed="true" data-view="wall">Posters</button><button aria-pressed="false" data-view="month">Calendar</button></div>
+      </div></div>
+    <div id="evOut" class="evOut"></div>
+  </div></section>
+  <section class="s" id="latest" hidden><div class="wrap">
+    <div class="sh"><h2 class="xw">Latest from USG</h2><div class="ev-tools"><a class="ig-follow" href="https://www.instagram.com/princeton_usg/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" width="20" height="20"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.3" fill="currentColor"/></svg>@princeton_usg</a></div></div>
+    <div class="ig-grid" id="latestWall"></div>
+  </div></section>
+  <section class="pin-h" id="priorities"><div class="ph-sticky">
+    <div class="wrap sh"><h2 class="xw">What we’re pushing for</h2><p>The Senate’s policy priorities this term.</p></div>
+    <div class="ph-track" id="pri"></div>
+    <div class="wrap"><div class="ph-bar"><i></i></div></div>
+  </div></section>
+  <section class="mission pin-words" id="mission"><div class="pw-sticky"><div class="wrap">
+    <blockquote>Our mission is to <em>serve</em>, to <em>represent</em>, and to <em>advocate</em> for the student body, both individually and collectively, all while proactively listening, celebrating diversity, and strengthening an inclusive campus community.</blockquote>
+  </div></div></section>
+  <section class="s mission" style="padding-top:0"><div class="wrap">
+    <div class="mphoto" id="missionPhoto" hidden></div>
+    <div class="mcols">
+      <div><h3>Our vision</h3><p>We envision a dynamic community of care. We seek to celebrate students’ diverse ideas and backgrounds, and to support individual and community growth, including through sometimes challenging and uncomfortable dialogue. For us, to lead is to serve; we value active listening, communication, and trust, all towards meaningful transparency. We aspire towards a student body in which students are not only empowered but eager to serve their communities, especially in times of adversity. Above all, we strive towards a community of care: care for ourselves, for each other, and for our community as a whole.</p></div>
+      <div><h3>Administration statement</h3><p>Through policy advocacy and programming initiatives, our mission is to represent the best interests of the student body while fostering an outward-facing USG. By strengthening transparency, proactive outreach, and clear communication, we seek to enhance student understanding of approachable Senate support structures—ensuring that every student feels represented and empowered.</p></div>
+    </div>
+  </div></section>
+  <section class="s" id="committees-home"><div class="wrap">
+    <div class="sh"><h2 class="xw">Committees</h2></div>
+    <div id="cgridHome"></div>
+  </div></section>
+  <section class="s" id="do" style="padding-top:0"><div class="wrap">
+    <div class="sh"><h2 class="xw">Quick links</h2></div>
+    <div class="quick">
+      <a href="/projectsboardclubfunding"><b class="xw">Fund it</b><span>Apply to Projects Board for club event money.</span></a>
+      <a href="/sgrcclubapproval"><b class="xw">Start a club</b><span>Get recognized through SGRC.</span></a>
+      <a href="/mentalhealthresources"><b class="xw">Get support</b><span>Mental health resources on and off campus.</span></a>
+      <a href="/elections"><b class="xw">Run</b><span>Election schedules, rules, and results.</span></a>
+      <a href="/committees"><b class="xw">Join in</b><span>Committees and working groups.</span></a>
+      <a href="/budgetreports"><b class="xw">Follow the money</b><span>Every USG budget report.</span></a>
+    </div>
+  </div></section>
+</div>
+
+<!-- INNER VIEWS share one band -->
+<div class="view" id="v-inner" hidden>
+  <section class="band" data-band>
+    <svg class="stripes" viewBox="0 0 600 900" preserveAspectRatio="xMaxYMid slice" aria-hidden="true"><path d="M600 40 C470 60 330 30 170 92 C320 86 470 104 600 128Z"/><path d="M600 200 C430 196 300 238 60 330 C280 290 440 290 600 300Z"/><path d="M600 410 C470 420 360 460 220 520 C380 488 500 492 600 500Z"/><path d="M600 560 C400 572 250 640 0 760 C250 680 430 650 600 650Z"/><path d="M600 760 C500 768 410 800 300 850 C430 820 530 822 600 826Z"/><path d="M600 860 C540 864 480 884 420 900 L600 900Z"/></svg>
+    <div class="wrap" id="bandIn"></div>
+    <div class="band-stickers" id="bandStk"></div>
+  </section>
+  <div id="bandStrip"></div>
+  <section class="content"><div class="wrap" id="innerOut"></div></section>
+</div>
+</main>
+
+<footer id="visit">
+  <div class="wrap">
+    <div class="fgrid">
+      <div><div class="flogo" id="flogo" hidden><img id="flogoImg" alt="Princeton USG"></div>
+        <h3>Swing by</h3><p style="margin:0 0 14px;font-weight:600">Room 204, Frist Campus Center<br>Princeton, NJ 08544<br>Tea, coffee, and snacks on us.</p>
+        <ul class="fhours" id="fhours"><li data-d="0,1,2,3,4"><span>Sun – Thu</span><span>4:30 – 7:30 PM</span></li><li data-d="5,6"><span>Fri – Sat</span><span>2:00 – 5:00 PM</span></li></ul></div>
+      <div><h3>Committees</h3><ul id="fcomm"></ul></div>
+      <div><h3>Senate</h3><ul><li><a href="/senate-members">Members</a></li><li><a href="/budgetreports">Budget reports</a></li><li><a href="/usgdocumentsandcharters">Charters</a></li><li><a href="/history">History</a></li></ul></div>
+      <div><h3>Reach us</h3><ul><li><a href="mailto:usg@princeton.edu">usg@princeton.edu</a></li><li><a href="https://www.instagram.com/princeton_usg/" target="_blank" rel="noopener">@princeton_usg</a></li><li></li></ul></div>
+    </div>
+    <div class="bigword xw" aria-hidden="true">TIGERS</div>
+  </div>
+  <div class="wrap fbase"><span>© <span id="yr"></span> Princeton Undergraduate Student Government</span></div>
+</footer>
+
+
+
+
+<div class="toast" id="toast" role="status"></div>
+
+<dialog class="lbx" id="lb"><button class="x" data-close aria-label="Close" style="z-index:3">×</button><div class="lbx-in"><img id="lbImg" alt=""><p id="lbCap"></p></div></dialog>
+
+
+

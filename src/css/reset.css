@@ -1,0 +1,9 @@
+/* neutralize the Squarespace template's typography inside the new layout (zero-weight, so the design's own rules win) */
+html.usg-skin{font-size:16px!important}
+.usg-r{font-family:var(--font);font-size:16px;line-height:1.55;letter-spacing:normal}
+.usg-r :where(h1,h2,h3,h4,h5,h6,p,li,a,blockquote,figcaption,label,input,textarea,select,button,dt,dd,small,b,strong,em,span){font-family:inherit;text-transform:none;color:inherit;letter-spacing:inherit}
+.usg-r :where(p,li,dd){font-size:inherit;line-height:inherit}
+.usg-r :where(h1,h2,h3,h4,h5,h6){font-weight:800}
+.usg-r :where(b,strong){font-weight:800}
+/* template margins/padding on layout boxes (browser default is 0, so this only undoes the template) */
+.usg-r :where(section,header,footer,main,nav,article,aside,div,span,a,button,dialog,svg){margin:0;padding:0}

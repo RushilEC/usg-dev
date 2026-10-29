@@ -1,0 +1,123 @@
+/* ===== Squarespace edition: hide the template, keep its content (not scoped) ===== */
+html.usg-loading body{opacity:0}
+html.usg-skin,html.usg-skin body{margin:0!important;padding:0!important;border:0!important;background:var(--page)!important}
+html.usg-skin body{color:var(--text)!important}
+/* Locked ("sticky") sections need the browser window to be the only scroller: undo the template's overflow/height settings */
+html.usg-skin{overflow-x:hidden!important;overflow-y:visible!important;height:auto!important;min-height:0!important;max-height:none!important;scroll-snap-type:none!important;contain:none!important;transform:none!important;filter:none!important}
+html.usg-skin body{overflow:visible!important;height:auto!important;min-height:0!important;max-height:none!important;position:static!important;transform:none!important;filter:none!important;perspective:none!important;contain:none!important}
+#usg-root{overflow-x:clip!important;overflow-y:visible!important;transform:none!important;contain:none!important;max-width:100%}
+/* iPhone Safari can zoom the page out to show wide moving parts (ticker, stripes, sliding cards): crop them where they live */
+#usg-root .marquee,#usg-root .hero,#usg-root .reel,#usg-root .band,#usg-root .pin-h,#usg-root .pin-words,#usg-root section.s,#usg-root footer{overflow-x:clip!important;max-width:100%}
+@supports not (overflow:clip){#usg-root .marquee,#usg-root .hero,#usg-root .reel,#usg-root .band,#usg-root footer{overflow:hidden!important}}
+html.usg-skin::before,html.usg-skin::after,html.usg-skin body::before,html.usg-skin body::after{display:none!important;content:none!important}
+html.usg-skin body>*:not(#usg-root):not(script):not(style):not(link):not([class*="cookie"]):not([id*="cookie"]):not([class*="lightbox"]):not([class*="Lightbox"]):not([class*="modal"]){display:none!important}
+/* one typeface everywhere in the new layout, whatever the template says */
+#usg-root,#usg-root *:not([class*="icon"]):not([class*="Icon"]):not(i){font-family:"Archivo","Helvetica Neue",Arial,sans-serif!important;font-stretch:100%}
+#usg-root footer h3{font-weight:700!important}
+#usg-root{margin:0;padding:0;border:0;box-sizing:border-box}
+#usg-root .xw{font-weight:900!important}
+
+/* Squarespace cookie notice, restyled */
+html.usg-skin .usg-cookie{background:#111!important;color:#fff!important;border:0!important;border-radius:22px!important;box-shadow:0 18px 50px rgba(0,0,0,.35),0 0 0 2px var(--orange)!important;padding:20px 22px!important;max-width:380px!important;font-family:"Archivo","Helvetica Neue",Arial,sans-serif!important;overflow:hidden!important}
+html.usg-skin .usg-cookie::before{content:"";display:block;height:6px;margin:-20px -22px 16px;background:repeating-linear-gradient(115deg,var(--orange) 0 18px,#111 18px 30px)}
+html.usg-skin .usg-cookie *{font-family:inherit!important;color:inherit!important;background:transparent!important;letter-spacing:normal!important;text-transform:none!important}
+html.usg-skin .usg-cookie p,html.usg-skin .usg-cookie span,html.usg-skin .usg-cookie div{font-size:14px!important;line-height:1.5!important}
+html.usg-skin .usg-cookie a:not(.usg-cookie-btn){text-decoration:underline!important;text-underline-offset:3px}
+html.usg-skin .usg-cookie .usg-cookie-btn{background:var(--orange)!important;color:#000!important;border:0!important;border-radius:999px!important;padding:10px 22px!important;font-weight:800!important;font-size:14px!important;cursor:pointer!important;margin-top:12px!important;box-shadow:none!important;text-decoration:none!important;display:inline-block!important;transition:transform .15s}
+html.usg-skin .usg-cookie .usg-cookie-btn:hover{transform:translateY(-2px)}
+html.usg-skin .usg-cookie .usg-cookie-btn+.usg-cookie-btn{background:transparent!important;color:#fff!important;box-shadow:inset 0 0 0 2px #fff!important;margin-left:8px!important}
+@media (max-width:760px){html.usg-skin .usg-cookie{max-width:none!important;width:auto!important;left:12px!important;right:12px!important;bottom:12px!important;box-sizing:border-box!important}}
+html.usg-skin .usg-cookie{box-sizing:border-box!important;max-width:min(380px,calc(100vw - 24px))!important}
+/* never show the browser's own play button / controls on the background video */
+#usg-root #heroBg video::-webkit-media-controls,#usg-root #heroBg video::-webkit-media-controls-start-playback-button,#usg-root #heroBg video::-webkit-media-controls-panel,#usg-root #heroBg video::-webkit-media-controls-play-button,#usg-root #heroBg video::-webkit-media-controls-overlay-play-button{display:none!important;-webkit-appearance:none!important;opacity:0!important}
+#usg-root #heroBg video{pointer-events:none}
+/* bubble lettering (wins over the site-wide typeface rule) */
+#usg-root .orbit .bub .bub-in b{font-family:var(--bf,inherit)!important;text-transform:var(--bt,none)!important;letter-spacing:var(--bl,0)!important;font-size:calc(clamp(.95rem,2.5cqw,1.8rem)*var(--bs,1))!important;font-weight:400!important;font-variation-settings:normal!important;line-height:1!important;text-shadow:2px 3px 0 rgba(0,0,0,.35);transform:rotate(-3deg)}
+#usg-root .orbit .bub .bub-in small{font-family:"Mr Dafoe","Brush Script MT",cursive!important;font-size:clamp(1.1rem,2.6cqw,1.95rem)!important;font-weight:400!important;line-height:.95!important;letter-spacing:0!important;text-transform:none!important;transform:rotate(-7deg) translateY(4px);display:block;opacity:.97;text-shadow:1px 2px 0 rgba(0,0,0,.25)}
+#usg-root .orbit .bub .bub-in small::after{content:"";display:block;width:60%;height:2px;margin:1px auto 0;border-radius:2px;background:currentColor;opacity:.55;transform:skewX(-20deg)}
+#usg-root .bigword{overflow:visible!important}
+
+/* keep the lettering clear of the sticker and centered in the circle */
+#usg-root .orbit .bub .bub-in{padding-top:6%!important;box-sizing:border-box}
+#usg-root .orbit .bub .bub-in b,#usg-root .orbit .bub .bub-in small{overflow-wrap:normal!important;word-break:normal!important;hyphens:none!important;text-align:center}
+
+/* header sits flush at the top on phones with a notch / camera area, covering it */
+#usg-root header.top{top:0!important;padding-top:env(safe-area-inset-top,0px)!important}
+
+/* headings: rounded wide caps, confident not shouty (big display titles keep Archivo) */
+#usg-root #v-inner .prose :is(h2,h3,h4),#usg-root #v-inner .cm-index-text :is(h2,h3),#usg-root #v-inner .sq-sec :is(h2,h3,h4){font-family:"Unbounded","Archivo",system-ui,sans-serif!important;text-transform:uppercase!important;font-weight:600!important;font-variation-settings:normal!important;letter-spacing:.02em!important;line-height:1.18!important}
+#usg-root #v-inner .prose h2,#usg-root #v-inner .cm-index-text h2{font-size:clamp(1.25rem,2.1vw,1.85rem)!important}
+#usg-root #v-inner .prose h3{font-size:clamp(1.02rem,1.45vw,1.3rem)!important}
+#usg-root #v-inner .prose h4{font-size:clamp(.92rem,1.15vw,1.08rem)!important}
+#usg-root #hdr .nb,#usg-root #drawerNav summary{font-family:"Unbounded","Archivo",system-ui,sans-serif!important;text-transform:uppercase!important;font-weight:600!important;font-variation-settings:normal!important;letter-spacing:.04em!important;font-size:.78rem!important}
+
+/* text links: caps with an orange highlighter swipe and an arrow, clearly clickable */
+#usg-root #v-inner .prose a:not(.file):not(.btn):not(.poster):not(.sm):not(.bub):not([class*="sqs-"]):not(.chip):not(.ig-post):not(.link-solo):not(.ig-tile):not(.ig-big):not(.ig-mail),
+#usg-root #v-inner .cm-index-text a:not(.btn):not(.link-solo){font-family:"Space Grotesk","Archivo",system-ui,sans-serif!important;text-transform:uppercase!important;font-weight:700!important;letter-spacing:.05em!important;font-size:.86em!important;color:inherit!important;text-decoration:none!important;border:0!important;outline:0;box-shadow:none!important;
+  background-image:linear-gradient(transparent 58%,color-mix(in srgb,var(--orange) 55%,transparent) 58%)!important;background-size:100% 100%;background-repeat:no-repeat;padding:0 .18em!important;border-radius:3px;transition:background-size .25s,background-color .25s,color .25s;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+#usg-root #v-inner .prose a:not(.file):not(.btn):not(.poster):not(.sm):not(.bub):not([class*="sqs-"]):not(.chip):not(.ig-post):not(.link-solo):not(.ig-tile):not(.ig-big):not(.ig-mail)::after{content:" →";font-weight:700}
+#usg-root #v-inner .prose a[target="_blank"]:not(.file):not(.btn):not(.poster):not(.sm):not(.bub):not([class*="sqs-"]):not(.chip):not(.ig-post):not(.link-solo):not(.ig-tile):not(.ig-big):not(.ig-mail)::after,
+#usg-root #v-inner .prose a[href^="http"]:not([href*="princeton.edu/"]):not(.file):not(.btn):not(.poster):not(.sm):not(.bub):not([class*="sqs-"]):not(.chip):not(.ig-post):not(.link-solo):not(.ig-tile):not(.ig-big):not(.ig-mail)::after{content:" ↗"}
+#usg-root #v-inner .prose a:not(.file):not(.btn):not(.poster):not(.sm):not(.bub):not([class*="sqs-"]):not(.chip):not(.ig-post):not(.link-solo):not(.ig-tile):not(.ig-big):not(.ig-mail):hover,
+#usg-root #v-inner .prose a:not(.file):not(.btn):not(.poster):not(.sm):not(.bub):not([class*="sqs-"]):not(.chip):not(.ig-post):not(.link-solo):not(.ig-tile):not(.ig-big):not(.ig-mail):focus-visible{background-color:var(--orange)!important;color:#000!important}
+/* email addresses keep their normal case */
+#usg-root #v-inner .prose a[href^="mailto:"],#usg-root #v-inner .cm-index-text a[href^="mailto:"]{text-transform:none!important;letter-spacing:0!important;font-size:.95em!important}
+#usg-root #v-inner .prose a[href^="mailto:"]::after{content:""!important}
+
+/* touchscreens of any size: priorities become the swipe row; homepage walls swipe too */
+html.touch .pin-h{height:auto!important}
+html.touch .ph-sticky{position:static!important;min-height:0!important;padding:70px 0 40px!important;height:auto!important}
+html.touch .ph-track{flex-direction:row!important;width:auto!important;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:14px max(6vw,18px) 26px!important;gap:16px;transform:none!important}
+html.touch .ph-track::-webkit-scrollbar{display:none}
+html.touch .pcard{width:min(82vw,440px)!important;flex:none;scroll-snap-align:center;min-height:0;transform:scale(.92) rotate(-1.5deg)!important;opacity:.6;transition:transform .45s var(--ease),opacity .45s}
+html.touch .pcard.on{transform:none!important;opacity:1}
+html.touch .ph-dots{display:flex!important}
+html.touch .ph-bar{display:none!important}
+html.touch #latestWall.wall,html.touch #v-home #evOut .wall{display:flex!important;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;gap:18px!important;padding:8px 18px 22px!important;margin:0 -18px!important;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+html.touch #latestWall.wall::-webkit-scrollbar,html.touch #v-home #evOut .wall::-webkit-scrollbar{display:none}
+html.touch #latestWall.wall>.poster,html.touch #v-home #evOut .wall>.poster{flex:0 0 min(64%,300px);scroll-snap-align:center}
+/* desktop: one tidy row of Instagram posts */
+html:not(.touch) #usg-root #latestWall.ig-wall{grid-template-columns:repeat(4,minmax(0,1fr))!important}
+html:not(.touch) #usg-root #latestWall.ig-wall>.poster:nth-child(n+5){display:none!important}
+@media (max-width:900px){html:not(.touch) #usg-root #latestWall.ig-wall{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+#usg-root .ig-more{text-align:center;margin:22px 0 0}
+#usg-root #v-inner .prose a.url-link{text-transform:none!important;letter-spacing:0!important;font-size:.95em!important}
+#usg-root #innerOut a.link-solo,#usg-root #latest a.link-solo{font-family:"Space Grotesk","Archivo",system-ui,sans-serif!important}
+
+/* never show the phone's own play button over the video band */
+#usg-root #heroBg video{pointer-events:none}
+/* one rule per pseudo-element: Safari drops a whole rule if it doesn't know one selector in it */
+#usg-root #heroBg video::-webkit-media-controls-start-playback-button{display:none!important;-webkit-appearance:none!important;opacity:0!important}
+#usg-root #heroBg video::-webkit-media-controls{display:none!important;opacity:0!important}
+#usg-root #heroBg video::-webkit-media-controls-panel{display:none!important;opacity:0!important}
+#usg-root #heroBg video::-webkit-media-controls-overlay-play-button{display:none!important;opacity:0!important}
+/* the video is only visible while it's actually playing; otherwise a still frame sits there instead */
+#usg-root .reel #heroBg{background:#000 var(--reel-still) center/cover no-repeat}
+#usg-root .reel #heroBg video{opacity:0!important;visibility:hidden!important;transition:opacity .5s}
+#usg-root .reel.vid-playing #heroBg video{opacity:1!important;visibility:visible!important}
+#usg-root .reel #heroBg iframe{opacity:0!important;transition:opacity .6s}
+#usg-root .reel.vid-playing #heroBg iframe{opacity:1!important}
+/* whole-line button-links use the link font (beats the site-wide font rule) */
+#usg-root #innerOut a.link-solo,#usg-root #v-home a.link-solo,#usg-root .ig-side a.link-solo{font-family:"Space Grotesk","Archivo",system-ui,sans-serif!important}
+
+/* ---------- accessibility ---------- */
+/* skip link: hidden until a keyboard user tabs to it */
+#usg-root .skip-link{position:fixed;left:16px;top:-80px;z-index:100000;background:#111;color:#fff!important;padding:12px 18px;border-radius:12px;font-weight:800;text-decoration:none!important;box-shadow:0 0 0 3px #F58025;transition:top .15s}
+#usg-root .skip-link:focus{top:calc(12px + env(safe-area-inset-top,0px))}
+#usg-root main:focus{outline:none}
+/* a clear focus ring on everything you can tab to (keyboard only, not mouse clicks) */
+#usg-root :is(a,button,summary,input,select,textarea,[tabindex]):focus-visible{outline:3px solid #F58025!important;outline-offset:3px!important;border-radius:6px}
+#usg-root .ig-tile:focus-visible,#usg-root .poster:focus-visible,#usg-root .sm:focus-visible{outline-offset:4px!important}
+/* "reduce motion" turned on: nothing moves by itself */
+@media (prefers-reduced-motion:reduce){
+  #usg-root *,#usg-root *::before,#usg-root *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  html.usg-skin{scroll-behavior:auto!important}
+  #usg-root #heroBg video,#usg-root #heroBg iframe{display:none!important}
+  #usg-root .reel #heroBg{opacity:1!important}
+  #usg-root .pin-words .w{color:inherit!important;opacity:1!important}
+  #usg-root .marquee .track,#usg-root #track{transform:none!important;flex-wrap:wrap;justify-content:center;white-space:normal}
+  #usg-root .ig-tile:hover img{transform:none!important}
+}
+
+/* never print an image's description as visible text if the image itself can't show */
+#usg-root .book img,#usg-root .flip img,#usg-root .poster img,#usg-root .ig-tile img{color:transparent;font-size:0}

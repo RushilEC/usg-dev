@@ -126,6 +126,9 @@ html:not(.touch) #usg-root #latestWall.ig-wall>.poster:nth-child(n+5){display:no
   #usg-root .ig-tile:hover img{transform:none!important}
 }
 
+/* never print an image's description as visible text if the image itself can't show */
+#usg-root .book img,#usg-root .flip img,#usg-root .poster img,#usg-root .ig-tile img{color:transparent;font-size:0}
+
 html.usg-skin{font-size:16px!important}
 #usg-root{font-family:var(--font);font-size:16px;line-height:1.55;letter-spacing:normal}
 #usg-root :where(h1,h2,h3,h4,h5,h6,p,li,a,blockquote,figcaption,label,input,textarea,select,button,dt,dd,small,b,strong,em,span){font-family:inherit;text-transform:none;color:inherit;letter-spacing:inherit}
