@@ -8,8 +8,13 @@ repo = os.environ.get("GITHUB_REPOSITORY", "").split("/")[-1]
 BASE = os.environ.get("BASE", "" if (not repo or repo.endswith(".github.io")) else "/" + repo).rstrip("/")
 OUT = os.environ.get("OUT", "site")
 MAX_PAGES = 250
-HEAD = open("skin/header.html", encoding="utf-8").read()
-FOOT = open("skin/footer.html", encoding="utf-8").read()
+def read_skin(name):
+    # works whether the design files sit in skin/ or at the top of the repo
+    for p in (os.path.join("skin", name), name):
+        if os.path.exists(p):
+            return open(p, encoding="utf-8").read()
+    raise SystemExit(f"Can't find {name}. Upload header.html and footer.html (to the top of the repo or a 'skin' folder).")
+HEAD, FOOT = read_skin("header.html"), read_skin("footer.html")
 UA = {"User-Agent": "Mozilla/5.0 (USG dev-site builder; contact usg@princeton.edu)"}
 
 def get(url):
@@ -102,6 +107,9 @@ while todo and len(seen) < MAX_PAGES:
         pass
     ok += 1
 
+if ok == 0:
+    raise SystemExit(f"Couldn't copy any pages from {SOURCE}. The site may be down or blocking the copier; try Run workflow again in a few minutes.")
+os.makedirs(OUT, exist_ok=True)
 open(os.path.join(OUT, ".nojekyll"), "w").close()
 with open(os.path.join(OUT, "404.html"), "w", encoding="utf-8") as f:
     f.write(f'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Not on the dev site</title>'
